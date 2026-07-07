@@ -23,8 +23,10 @@ app.post('/post',(req,res)=>{
 })
 
 app.get('/posts',(req,res)=>{
-    res.render('posts.ejs',{titles:posts.map(p => p.title),posts:posts});
-})
+    res.render('posts.ejs', {
+        posts: posts
+    });
+});
 
 app.listen(3000,()=>{
     console.log("Server is running on port 3000");
